@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mahadev Tour & Travels</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- small brand left for SEO (but main logo is centered in hero) -->
+        <div class="brand-text">
+          <div class="company">Mahadev Tour & Travels</div>
+          <div class="tagline">Designing journeys, delivering memories</div>
+        </div>
+      </div>
+
+      <nav class="top-actions">
+        <a class="tel" href="tel:+919560158097">Call: +91 95601 58097</a>
+        <a class="wa" href="https://wa.me/919354921915" target="_blank">WhatsApp</a>
+        <button id="openBookingHeader" class="btn-primary small">Book Now</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO WITH CENTERED LOGO + SLIDESHOW BACKGROUND -->
+  <section class="hero" id="home" aria-label="hero">
+    <div id="heroSlides" class="hero-slides">
+      <!-- JS will inject slides background -->
+    </div>
+
+    <!-- translucent overlay for blur readability -->
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content container">
+      <img src="mahadev-logo.jpg" alt="Mahadev Tour & Travels Logo" class="hero-logo" id="mainLogo">
+      <h1 class="hero-title">Mahadev Tour & Travels</h1>
+      <p class="hero-sub">All-India tours · Rent-a-cab · Custom itineraries · Pickup from Delhi</p>
+
+      <div class="hero-ctas">
+        <button id="openBookingPrimary" class="btn-primary">Start Booking</button>
+        <a class="btn-outline" href="tel:+919560158097">Call Now</a>
+        <a class="btn-ghost" href="https://wa.me/919354921915" target="_blank">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section" id="packages">
+    <div class="container">
+      <h2 class="section-title">Popular Tour Packages (Pickup: Delhi)</h2>
+      <p class="muted">Budget guideline ₹15 / km (road). Exact quote includes hotels, meals, tolls, driver charges.</p>
+
+      <div id="packagesGrid" class="cards-grid"></div>
+
+      <div class="note">Tip: Click "Enquire" to open WhatsApp with prefilled message for quick quote.</div>
+    </div>
+  </section>
+
+  <!-- RENT A CAB -->
+  <section class="section alt" id="rent">
+    <div class="container">
+      <h2 class="section-title">Rent a Cab — Vehicles</h2>
+      <p class="muted">SUV / Sedan / Mini Volvo / 12 / 17 / 22 seater — experienced drivers & comfy rides.</p>
+
+      <div class="rent-grid">
+        <!-- rent cards created in HTML for immediate structure -->
+        <div class="rent-card">
+          <img src="https://unsplash.com/photos/a-white-car-driving-down-a-road-next-to-a-forest-Rj5qRn-TVDo" alt="Sedan">
+          <h4>Sedan (Swift / Dzire)</h4>
+          <p class="muted">Comfortable for 4 adults with luggage</p>
+          <div class="rent-meta">Sample rate: ₹12 / km</div>
+          <div class="rent-actions"><button class="btn-primary small" onclick="openQuickEnquiry('Sedan')">Enquire</button></div>
+        </div>
+
+        <div class="rent-card">
+          <img src="https://unsplash.com/photos/a-white-car-parked-next-to-a-red-car-TkF_mDULpdw" alt="SUV">
+          <h4>SUV (Innova / Scorpio)</h4>
+          <p class="muted">Up to 6 passengers — ideal for family trips</p>
+          <div class="rent-meta">Sample rate: ₹16 / km</div>
+          <div class="rent-actions"><button class="btn-primary small" onclick="openQuickEnquiry('SUV')">Enquire</button></div>
+        </div>
+
+        <div class="rent-card">
+          <img src="https://unsplash.com/photos/a-yellow-and-white-van-parked-in-the-woods-9dGmgUBS6Co" alt="Mini Volvo">
+          <h4>Mini Volvo</h4>
+          <p class="muted">Comfortable coach for small groups</p>
+          <div class="rent-meta">Sample rate: ₹28 / km</div>
+          <div class="rent-actions"><button class="btn-primary small" onclick="openQuickEnquiry('Mini Volvo')">Enquire</button></div>
+        </div>
+
+        <div class="rent-card">
+          <img src="https://unsplash.com/photos/white-and-red-volkswagen-t-2-van-parked-near-green-trees-during-daytime-6U-4PMwa9PY" alt="12 Seater">
+          <h4>12 Seater</h4>
+          <p class="muted">School groups & family events</p>
+          <div class="rent-meta">Sample rate: ₹30 / km</div>
+          <div class="rent-actions"><button class="btn-primary small" onclick="openQuickEnquiry('12 Seater')">Enquire</button></div>
+        </div>
+
+        <div class="rent-card">
+          <img src="https://unsplash.com/photos/bus-on-road-near-railing-ubxqlmH3bFk" alt="17 Seater">
+          <h4>17 Seater</h4>
+          <p class="muted">Corporate transfers & mid-size groups</p>
+          <div class="rent-meta">Sample rate: ₹35 / km</div>
+          <div class="rent-actions"><button class="btn-primary small" onclick="openQuickEnquiry('17 Seater')">Enquire</button></div>
+        </div>
+
+        <div class="rent-card">
+          <img src="https://unsplash.com/photos/a-bus-that-is-sitting-in-the-street-6FgFRvwAG-Y" alt="22 Seater">
+          <h4>22 Seater</h4>
+          <p class="muted">Large groups, events & pilgrimages</p>
+          <div class="rent-meta">Sample rate: ₹40 / km</div>
+          <div class="rent-actions"><button class="btn-primary small" onclick="openQuickEnquiry('22 Seater')">Enquire</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div>
+        <h2 class="section-title">About Us</h2>
+        <p>Mahadev Tour & Travels provides curated tours across India with comfortable vehicles and experienced guides. We prioritize safety, comfort and transparent pricing.</p>
+        <ul class="info-list">
+          <li><strong>Founder:</strong> Rahul Kumar Gupta</li>
+          <li><strong>Address:</strong> GF4, B3/4 Commercial Complex, Dr. Mukherjee Nagar, Delhi - 110009</li>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/919354921915" target="_blank">+91 93549 21915</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+919560158097">+91 95601 58097</a></li>
+        </ul>
+      </div>
+      <div class="about-media">
+        <div class="media-card">
+          <div class="media-bg" style="background-image:url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="media-overlay">Professional design • Trusted services • Since 2005</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=900&q=60')"></div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60')"></div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=900&q=60')"></div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=60')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact Us</h3>
+        <p>GF4, B3/4 Commercial Complex, Dr. Mukherjee Nagar, Delhi - 110009</p>
+        <p>WhatsApp: <a href="https://wa.me/919354921915" target="_blank">+91 93549 21915</a></p>
+        <p>Phone: <a href="tel:+919560158097">+91 95601 58097</a></p>
+      </div>
+
+      <div>
+        <h3>Founder</h3>
+        <p><strong>Rahul Kumar Gupta</strong></p>
+        <p>Contact for partnerships & corporate bookings.</p>
+      </div>
+
+      <div class="footer-actions">
+        <button class="btn-primary" id="openBookingFooter">Book Now</button>
+        <a class="btn-outline" href="https://wa.me/919354921915" target="_blank">WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="copy">© 2025 Mahadev Tour & Travels — All rights reserved</div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <h3>Book Your Trip</h3>
+      <form id="bookingForm" autocomplete="off">
+        <div class="form-grid">
+          <label>
+            Name
+            <input type="text" id="bf_name" required placeholder="Your full name">
+          </label>
+          <label>
+            Mobile
+            <input type="tel" id="bf_mobile" required placeholder="9876543210">
+          </label>
+          <label>
+            Email (optional)
+            <input type="email" id="bf_email" placeholder="you@example.com">
+          </label>
+          <label>
+            Destination
+            <select id="bf_dest" required>
+              <option value="">Select destination</option>
+              <option>Manali</option><option>Nainital</option><option>Goa</option><option>Udaipur</option>
+              <option>Rishikesh</option><option>Shimla</option><option>Kedarnath</option><option>Jaipur</option>
+              <option>Ooty</option><option>Darjeeling</option><option>Varanasi</option><option>Kochi</option>
+            </select>
+          </label>
+          <label>
+            Pickup Date
+            <input type="date" id="bf_date" required>
+          </label>
+          <label>
+            Passengers
+            <input type="number" id="bf_pax" min="1" value="2" required>
+          </label>
+          <label style="grid-column:1/-1">
+            Message / Requirements
+            <textarea id="bf_msg" rows="3" placeholder="Any special requests (hotels, meals, etc.)"></textarea>
+          </label>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Send to WhatsApp</button>
+          <button type="button" class="btn-outline" id="modalClear">Clear</button>
+        </div>
+
+        <div class="modal-note">Note: WhatsApp will open with a prefilled message. Press Send in WhatsApp to complete the enquiry.</div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
